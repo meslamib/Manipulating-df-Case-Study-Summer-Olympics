@@ -1,5 +1,5 @@
 # Construct the pivot table: counted
-counted = pd.pivot_table(medals, index='NOC', values='Athlete', columns='Medal', aggfunc='count')
+counted = medals.pivot_table(index='NOC', values='Athlete', columns='Medal', aggfunc='count')
 
 # Create the new column: counted['totals']
 counted['totals'] = counted.sum(axis='columns')
