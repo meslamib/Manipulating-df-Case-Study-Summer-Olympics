@@ -1,3 +1,6 @@
+# Redefine 'Medal' as an ordered categorical
+medals.Medal = pd.Categorical(values = medals.Medal, categories=['Bronze', 'Silver', 'Gold'], ordered=True)
+
 # Create the DataFrame: usa
 usa = medals[medals.NOC == 'USA']
 
